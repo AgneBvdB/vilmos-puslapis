@@ -1,0 +1,19 @@
+
+/*body {
+    background: linear-gradient(#f3b15a,#80561f);
+    color: rgb(225, 197, 238);
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+.header {
+    position: fixed;
+    width: 100%;
+
+}
+*/
+body {
+    overflow-x: hidden;
+}
