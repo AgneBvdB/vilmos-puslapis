@@ -25,10 +25,15 @@ Open index.html in your browser.
 
 ## Project Status
 
-Building landing page
+Gallery started. Carousel started.
+
+### Next steps
+
+- Gallery: tidy up, connect anchors to carousel slides
+- Add carousel page with information about painting: Title, year, technique (?)
 
 ## Future improvements
 
 - Contact form
 - Galery
-- Styling
+- Search and grouping of paintings
