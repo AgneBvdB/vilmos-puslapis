@@ -16,7 +16,7 @@
                     <a href="about.html" class="nav-link">Apie</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a href="gallery.html" class="nav-link">Galerija</a>
+                    <a href="js-gallery.html" class="nav-link">Galerija</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a href="contacts.html" class="nav-link">Kontaktai</a>
@@ -28,23 +28,9 @@
         </div>
     </nav>
     <main style="padding-top: 5rem;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 p-3">
-                    <div class="card">
-                        <a data-bs-toggle="modal" data-bs-target="#paintingModal" href="#" onclick="openModal('assets\paintings\NOSTALGIŠKAS.-Pop.-pastelė-35x50.webp')">
-                            <img src="assets\paintings\NOSTALGIŠKAS.-Pop.-pastelė-35x50.webp" class="card-img-top" alt="..." loading="lazy">
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">„Pirmas paveikslas“</h5>
-                        <p class="card-text">Pastelė, 2024</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+       <div style="max-width: 100%;" class="row" id="gallery"></div>
     </main>
-    <div class="modal fade" id="paintingModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="paintingModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content bg-dark">
             <div class="modal-body p-0 text-center">
@@ -54,11 +40,31 @@
         </div>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
         <script>
-  function openModal(imageSrc) {
-    document.getElementById('modalImage').src = imageSrc;
-  }
-</script>
+            function openModal(imageSrc) {
+                document.getElementById('modalImage').src = imageSrc;
+            }
+        </script>
+        <script>
+            const gallery = document.getElementById("gallery");
+
+            paintings.forEach(painting => {
+                const col = document.createElement("div");
+                col.className = "col-lg-4 p-4";
+                col.innerHTML = `
+                <div class="card">
+                    <a data-bs-toggle="modal" data-bs-target="#paintingModal" onclick="openModal('${painting.src}')">
+                        <img src="${painting.src}" class="card-img-top" alt="..." loading="lazy">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">${painting.title}</h5>
+                        <p class="card-text">${painting.description}</p>
+                    </div>
+                </div>`;
+                    gallery.appendChild(col);
+            });
+        </script>
 </body>
 </html>
 

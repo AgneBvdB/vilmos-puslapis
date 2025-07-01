@@ -25,12 +25,13 @@ Open index.html in your browser.
 
 ## Project Status
 
-Gallery started. Carousel started.
+Gallery started. 
 
 ### Next steps
 
-- Gallery: tidy up, connect anchors to carousel slides
-- Add carousel page with information about painting: Title, year, technique (?)
+- Gallery: fix layout (gaps on top and bottom )
+- make modal next and previous buttons
+- finish uploading pctures
 
 ## Future improvements
 
