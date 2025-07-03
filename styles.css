@@ -15,5 +15,18 @@
 }
 
 #gallery {
-    grid-auto-flow: dense;
+
+    visibility: hidden; 
 }
+
+.grid-sizer, .grid-item {
+  width: 33.3333%;
+}
+
+
+@media (max-width: 576px) {
+  .grid-sizer, .grid-item {
+    width: 100%;
+  }
+}
+
